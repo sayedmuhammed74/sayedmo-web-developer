@@ -72,28 +72,28 @@ export default function Home() {
       description:
         'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
       link: '#',
-      image: './projects/e-commerce.png',
+      image: './projects/social.png',
     },
     {
       name: 'E-Commerce',
       description:
         'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
       link: '#',
-      image: './projects/e-commerce.png',
+      image: './projects/tedx.png',
     },
     {
       name: 'E-Commerce',
       description:
         'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
       link: '#',
-      image: './projects/e-commerce.png',
+      image: './projects/int.png',
     },
     {
       name: 'E-Commerce',
       description:
         'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
       link: '#',
-      image: './projects/e-commerce.png',
+      image: './projects/portfolio.png',
     },
   ];
 
@@ -310,7 +310,7 @@ export default function Home() {
       {/* Projects */}
       <section id="projects">
         <div className="container mx-auto px-5 py-20 lg:h-[100vh]">
-          <h2 className="text-4xl font-medium border-l-8 px-3 mb-8 border-primary text-white">
+          <h2 className="text-4xl font-medium border-l-8 px-3 mb-5 border-primary text-white">
             Projects
           </h2>
           <div className="flex justify-around gap-x-1 gap-y-6 flex-wrap px-5 py-5">

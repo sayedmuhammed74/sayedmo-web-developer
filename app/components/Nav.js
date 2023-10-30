@@ -8,18 +8,18 @@ import { useRef } from 'react';
 import { AiOutlineUnorderedList } from 'react-icons/ai';
 
 const Nav = () => {
-  const navBar = useRef(null);
-
+  const navBar = useRef();
   useEffect(() => {
-    if (typeof window !== 'undefined')
-      window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
+      if (typeof window !== 'undefined') {
         if (window.scrollY >= 620) {
           navBar.current.classList.remove('-translate-y-full');
         } else {
           navBar.current.classList.add('-translate-y-full');
         }
-      });
-  }, [window.scrollY]);
+      }
+    });
+  }, []);
   return (
     <nav
       className="fixed -translate-y-full w-full nav top-0 z-10 duration-150 ease-in opacity-90 bg-dark"
