@@ -23,7 +23,3 @@ html {
 .input {
   @apply text-base px-4 py-1 rounded-2xl text-gray-500 bg-black;
 }
-
-/* .nav {
-  @apply hidden -translate-y-full;
-} */

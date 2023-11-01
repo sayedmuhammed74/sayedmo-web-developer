@@ -1,3 +1,5 @@
+'use client';
+
 // icons
 import {
   AiFillGithub,
@@ -13,6 +15,9 @@ import {
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { TiContacts } from 'react-icons/ti';
+
+// framer motion
+import { motion } from 'framer-motion';
 
 // components
 import Service from './components/Service';
@@ -46,17 +51,17 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: 'HTML', percentage: '90' },
-    { name: 'CSS', percentage: '90' },
-    { name: 'JavaScript', percentage: '90' },
-    { name: 'Tailwind', percentage: '90' },
-    { name: 'Framer Motion', percentage: '90' },
-    { name: 'React', percentage: '90' },
-    { name: 'Next', percentage: '90' },
-    { name: 'NodeJS', percentage: '70' },
-    { name: 'Express', percentage: '70' },
-    { name: 'MongoDB', percentage: '90' },
-    { name: 'MySQL', percentage: '70' },
+    { name: 'HTML', percentage: 90 },
+    { name: 'CSS', percentage: 90 },
+    { name: 'JavaScript', percentage: 90 },
+    { name: 'Tailwind.CSS', percentage: 90 },
+    { name: 'Framer Motion', percentage: 90 },
+    { name: 'React.JS', percentage: 90 },
+    { name: 'Next.JS', percentage: 90 },
+    { name: 'Node.JS', percentage: 80 },
+    { name: 'Express.JS', percentage: 80 },
+    { name: 'MongoDB', percentage: 90 },
+    { name: 'MySQL', percentage: 80 },
   ];
 
   const projects = [
@@ -68,31 +73,31 @@ export default function Home() {
       image: './projects/e-commerce.png',
     },
     {
-      name: 'E-Commerce',
+      name: 'Social App',
       description:
-        'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
-      link: '#',
+        'Responsive Front End Social with pure technologies (HTML, CSS, JavaScript)',
+      link: 'https://sayedmuhammed74.github.io/social',
       image: './projects/social.png',
     },
     {
-      name: 'E-Commerce',
+      name: 'INT',
       description:
-        'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
-      link: '#',
-      image: './projects/tedx.png',
-    },
-    {
-      name: 'E-Commerce',
-      description:
-        'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
-      link: '#',
+        'Startup Programming Company Website with Technologies (Next.js, Tailwind.css, Framer Motion, React Query)',
+      link: 'https://int-firm.com/',
       image: './projects/int.png',
     },
     {
-      name: 'E-Commerce',
+      name: 'TEDx',
       description:
-        'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
-      link: '#',
+        'TEDx Banisuef Event Website 2022 with pure technologies (HTML, CSS, JavaScript) ',
+      link: 'https://sayedmuhammed74.github.io/TEDx/',
+      image: './projects/tedx.png',
+    },
+    {
+      name: 'Portfolio',
+      description:
+        'old Portfolio to show the difference and progress with Technologies (React.js, Pure CSS)',
+      link: 'https://sayedmuhammed74.github.io/Portfolio/',
       image: './projects/portfolio.png',
     },
   ];
@@ -105,53 +110,75 @@ export default function Home() {
         <div className=" grid grid-cols-9 h-[100vh]">
           <nav className="md:col-span-2 hidden md:flex flex-col justify-between items-center py-10 h-full text-white">
             {/* logo */}
-            <div>
+            <motion.div
+              initial={{ y: '10vh', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
               <h1 className="text-center text-2xl font-semibold">
                 Sayed<span className="ml-1.5 text-primary">Mo</span>
               </h1>
               <p className="text-xl font-medium">web developer</p>
-            </div>
-            <ul className="flex flex-col gap-6 text-lg">
-              <li>
+            </motion.div>
+            <ul className="flex flex-col justify-start items-start gap-6 text-lg font-medium">
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+              >
                 <a
                   href="#about"
                   className="font-medium duration-75 ease-in hover:text-primary"
                 >
                   About
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+              >
                 <a
                   href="#services"
                   className="font-medium duration-75 ease-in hover:text-primary"
                 >
                   Services
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+              >
                 <a
                   href="#skills"
                   className="font-medium duration-75 ease-in hover:text-primary"
                 >
                   Skills
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+              >
                 <a
                   href="#projects"
                   className="font-medium duration-75 ease-in hover:text-primary"
                 >
                   Projects
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+              >
                 <a
                   href="#contact"
                   className="font-medium duration-75 ease-in hover:text-primary"
                 >
                   Contact
                 </a>
-              </li>
+              </motion.li>
               <li>
                 <a
                   href="./resume.pdf"
@@ -166,9 +193,13 @@ export default function Home() {
               <h3 className="tetx-lg text-center mb-3 font-medium text-lg">
                 Follow Me
               </h3>
-              <div className="flex justify-between items-center text-xl text-primary">
-                <AiFillLinkedin className="bg-white rounded-xl" />
-                <AiFillGithub className="bg-white rounded-xl" />
+              <div className="flex justify-between gap-1 items-center text-xl text-primary">
+                <a href="https://www.linkedin.com/in/sayed-mohamed-680b491b8/">
+                  <AiFillLinkedin className="bg-white rounded-xl" />
+                </a>
+                <a href="https://github.com/sayedmuhammed74">
+                  <AiFillGithub className="bg-white rounded-xl" />
+                </a>
                 <FaHackerrank className="bg-white rounded-xl" />
                 <AiOutlineWhatsApp className="bg-white rounded-xl" />
                 <a href="https://www.facebook.com/sayed.muhammed.54922/">
@@ -328,8 +359,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
               <BiLogoGmail className="text-xl" />
               <h3 className="font-bold">Gmail</h3>
-              <p className="font-bold text-xs">
-                sayedmohamed123.sm74@gmail.com
+              <p className="font-bold text-xs text-center">
+                sayedmohamed123.sm74
+                <br />
+                @gmail.com
               </p>
             </div>
 
@@ -364,7 +397,7 @@ export default function Home() {
               <div className="grid py-5  grid-cols-2 gap-5">
                 <input
                   type="text"
-                  className="col-span-2 input"
+                  className="input col-span-2"
                   placeholder="name"
                 />
                 <input
@@ -377,9 +410,9 @@ export default function Home() {
                   className="input col-span-2 md:col-span-1"
                   placeholder="number"
                 />
-                <input
+                <textarea
                   type="text"
-                  className="col-span-2 input h-32"
+                  className="input col-span-2 h-32"
                   placeholder="message"
                 />
                 <button className="btn w-28 col-span-2 mx-auto">Send</button>

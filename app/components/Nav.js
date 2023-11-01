@@ -22,7 +22,7 @@ const Nav = () => {
   }, []);
   return (
     <nav
-      className="fixed -translate-y-full w-full nav top-0 z-10 duration-150 ease-in opacity-90 bg-dark"
+      className="fixed -translate-y-full w-full top-0 z-10 duration-150 ease-in opacity-90 bg-dark"
       ref={navBar}
     >
       <div className="container mx-auto flex justify-between items-center px-5 py-1 h-full text-white">
