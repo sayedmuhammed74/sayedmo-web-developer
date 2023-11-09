@@ -1,5 +1,3 @@
-'use client';
-
 // icons
 import {
   AiFillGithub,
@@ -24,6 +22,8 @@ import Service from './components/Service';
 import Skill from './components//Skill';
 import Project from './components/Project';
 import Nav from './components/Nav';
+import Logo from '@/app/components/logo/Logo';
+import List from '@/app/components/List/List';
 
 export default function Home() {
   // data
@@ -110,84 +110,8 @@ export default function Home() {
         <div className=" grid grid-cols-9 h-[100vh]">
           <nav className="md:col-span-2 hidden md:flex flex-col justify-between items-center py-10 h-full text-white">
             {/* logo */}
-            <motion.div
-              initial={{ y: '10vh', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <h1 className="text-center text-2xl font-semibold">
-                Sayed<span className="ml-1.5 text-primary">Mo</span>
-              </h1>
-              <p className="text-xl font-medium">web developer</p>
-            </motion.div>
-            <ul className="flex flex-col justify-start items-start gap-6 text-lg font-medium">
-              <motion.li
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-              >
-                <a
-                  href="#about"
-                  className="font-medium duration-75 ease-in hover:text-primary"
-                >
-                  About
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <a
-                  href="#services"
-                  className="font-medium duration-75 ease-in hover:text-primary"
-                >
-                  Services
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <a
-                  href="#skills"
-                  className="font-medium duration-75 ease-in hover:text-primary"
-                >
-                  Skills
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <a
-                  href="#projects"
-                  className="font-medium duration-75 ease-in hover:text-primary"
-                >
-                  Projects
-                </a>
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <a
-                  href="#contact"
-                  className="font-medium duration-75 ease-in hover:text-primary"
-                >
-                  Contact
-                </a>
-              </motion.li>
-              <li>
-                <a
-                  href="./resume.pdf"
-                  className="font-medium px-2 py-1 rounded-lg bg-primary"
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
+            <Logo />
+            <List />
             {/* follow */}
             <div>
               <h3 className="tetx-lg text-center mb-3 font-medium text-lg">
