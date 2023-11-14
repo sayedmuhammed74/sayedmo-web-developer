@@ -69,7 +69,7 @@ export default function Home() {
       name: 'E-Commerce',
       description:
         'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
-      link: '#',
+      link: 'https://mashro3.vercel.app/',
       image: './projects/e-commerce.png',
     },
     {
