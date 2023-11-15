@@ -29,24 +29,18 @@ export default function Home() {
   // data
   const services = [
     {
-      title: 'Web Development',
+      title: 'Front-End Development',
       description:
-        "I'm in the way to be Full Stack (MERN). Proficient in HTML, CSS, Taillwind, JavaScript, React, Next, API and",
+        'Proficient in HTML, CSS, Taillwind, Framer Motion, JavaScript, ReactJS, React Hooks, Redux Toolkit, NextJS 13, integration with API and',
+    },
+    {
+      title: 'Back-End Development',
+      description:
+        'NodeJS ,ExpressJS, MongoDB , MySQL and Bakend Concepts ( Authentication, Authorization, ... )',
     },
     {
       title: 'Web Design',
-      description:
-        "I'm in the way to be Full Stack (MERN). Proficient in HTML, CSS, Taillwind, JavaScript, React, Next, API and",
-    },
-    {
-      title: 'Backend Development',
-      description:
-        "I'm in the way to be Full Stack (MERN). Proficient in HTML, CSS, Taillwind, JavaScript, React, Next, API and",
-    },
-    {
-      title: 'Front End Development',
-      description:
-        "I'm in the way to be Full Stack (MERN). Proficient in HTML, CSS, Taillwind, JavaScript, React, Next, API and",
+      description: 'Basics of Website Designing',
     },
   ];
 
@@ -166,11 +160,14 @@ export default function Home() {
             </p>
             <p className="leading-8">
               Recent Computer Science graduate with focus on Front-End Web
-              Development, I'm in the way to be Full Stack (MERN). Proficient in
-              HTML, CSS, Taillwind, JavaScript, React, Next, API and responsive
-              web design. Strong collaboration skills, attention to detail, and
-              problem-solving skills. Seeking to leverage these skills as a
-              front-end developer.
+              Development & Backend (NodeJS) I'm in the way to be Full Stack
+              (MERN). Proficient in HTML5, CSS3, Taillwind, JavaScript, React,
+              NextJS, Restful API and responsive web design. And not a little
+              knowledge in backend side ( Nodejs , Express , mongodb, mysql )
+              and its concepts ( Authentication, Authorisation , MVC
+              architecture, Modelling, RestFul API , …) Strong collaboration
+              skills, attention to detail, and problem-solving skills. Seeking
+              to leverage these skills as a front-end developer.
             </p>
             <button className="btn m-5">
               <a href="./resume.pdf">Download CV</a>
