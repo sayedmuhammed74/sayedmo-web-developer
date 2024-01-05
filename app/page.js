@@ -14,9 +14,6 @@ import { BiLogoGmail } from 'react-icons/bi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { TiContacts } from 'react-icons/ti';
 
-// framer motion
-import { motion } from 'framer-motion';
-
 // components
 import Service from './components/Service';
 import Skill from './components//Skill';
@@ -24,6 +21,7 @@ import Project from './components/Project';
 import Nav from './components/Nav';
 import Logo from '@/app/components/logo/Logo';
 import List from '@/app/components/List/List';
+import ContactForm from './components/ContactForm/ContactForm';
 
 export default function Home() {
   // data
@@ -314,31 +312,7 @@ export default function Home() {
             <h2 className="text-4xl mt-7  w-60 mx-auto font-medium border-l-8 px-3 mb-8 border-primary text-white">
               Contact Us
             </h2>
-            <form className="w-[80%] mx-auto flex justify-center items-center">
-              <div className="grid py-5  grid-cols-2 gap-5">
-                <input
-                  type="text"
-                  className="input col-span-2"
-                  placeholder="name"
-                />
-                <input
-                  type="email"
-                  className="input col-span-2 md:col-span-1"
-                  placeholder="email"
-                />
-                <input
-                  type="text"
-                  className="input col-span-2 md:col-span-1"
-                  placeholder="number"
-                />
-                <textarea
-                  type="text"
-                  className="input col-span-2 h-32"
-                  placeholder="message"
-                />
-                <button className="btn w-28 col-span-2 mx-auto">Send</button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
