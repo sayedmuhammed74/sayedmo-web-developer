@@ -279,7 +279,7 @@ export default function Home() {
               <BiLogoGmail className="text-xl" />
               <h3 className="font-bold">Gmail</h3>
               <p className="font-bold text-xs text-center">
-                sayedmohamed123.sm74
+                sayedmo.web.developer
                 <br />
                 @gmail.com
               </p>
