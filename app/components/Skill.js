@@ -5,11 +5,9 @@ const Skill = ({ skill }) => {
         <h3 className="mb-2">{skill.name}</h3>
         <div className="bg-dark h-5 rounded-md overflow-hidden flex items-center">
           <div
-            className={`w-[${String(
-              skill.percentage
-            )}%] h-full px-2 font-light text-sm bg-primary`}
+            className={`${skill.percentage} h-full px-2 font-light text-sm bg-primary`}
           >
-            {skill.percentage}%
+            {skill.percentage.slice(3, 5)}%
           </div>
         </div>
       </div>

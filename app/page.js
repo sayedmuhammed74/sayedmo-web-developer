@@ -43,17 +43,17 @@ export default function Home() {
   ];
 
   const skills = [
-    { name: 'HTML', percentage: 90 },
-    { name: 'CSS', percentage: 90 },
-    { name: 'JavaScript', percentage: 90 },
-    { name: 'Tailwind.CSS', percentage: 90 },
-    { name: 'Framer Motion', percentage: 90 },
-    { name: 'React.JS', percentage: 90 },
-    { name: 'Next.JS', percentage: 90 },
-    { name: 'Node.JS', percentage: 80 },
-    { name: 'Express.JS', percentage: 80 },
-    { name: 'MongoDB', percentage: 90 },
-    { name: 'MySQL', percentage: 80 },
+    { name: 'HTML', percentage: 'w-[90%]' },
+    { name: 'CSS', percentage: 'w-[90%]' },
+    { name: 'JavaScript', percentage: 'w-[90%]' },
+    { name: 'Tailwind.CSS', percentage: 'w-[90%]' },
+    { name: 'Framer Motion', percentage: 'w-[80%]' },
+    { name: 'React.JS', percentage: 'w-[85%]' },
+    { name: 'Next.JS', percentage: 'w-[90%]' },
+    { name: 'Node.JS', percentage: 'w-[80%]' },
+    { name: 'Express.JS', percentage: 'w-[80%]' },
+    { name: 'MongoDB', percentage: 'w-[80%]' },
+    { name: 'MySQL', percentage: 'w-[75%]' },
   ];
 
   const projects = [
