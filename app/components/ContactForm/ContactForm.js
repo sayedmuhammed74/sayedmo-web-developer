@@ -1,8 +1,9 @@
 'use client';
 
-import Toastify from 'toastify-js';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const nameRef = useRef();
@@ -36,21 +37,16 @@ const ContactForm = () => {
       .then(
         function (response) {
           console.log('SUCCESS!', response.status, response.text);
-          //   alert('Thanks, message sent successfully');
-          Toastify({
-            text: 'This is a toast',
-            duration: 3000,
-            destination: 'https://github.com/apvarun/toastify-js',
-            newWindow: true,
-            close: true,
-            gravity: 'top', // `top` or `bottom`
-            position: 'left', // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-              background: 'linear-gradient(to right, #00b09b, #96c93d)',
-            },
-            onClick: function () {}, // Callback after click
-          }).showToast();
+          toast.success('Email is Sent Successfully', {
+            position: 'top-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+          });
         },
         function (error) {
           alert('OOPs something went wrong... Try again later');
@@ -92,6 +88,18 @@ const ContactForm = () => {
         <button onClick={sendMessage} className="btn w-28 col-span-2 mx-auto">
           Send
         </button>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
       </div>
     </form>
   );
