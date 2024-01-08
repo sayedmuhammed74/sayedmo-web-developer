@@ -116,13 +116,18 @@ export default function Home() {
                 <a href="https://github.com/sayedmuhammed74">
                   <AiFillGithub className="bg-white rounded-xl" />
                 </a>
-                <FaHackerrank className="bg-white rounded-xl" />
-                <AiOutlineWhatsApp className="bg-white rounded-xl" />
+                <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
+                  <FaHackerrank className="bg-white rounded-xl" />
+                </a>
+                <a href="https://wa.link/tsdp5l">
+                  <AiOutlineWhatsApp className="bg-white rounded-xl" />
+                </a>
                 <a href="https://www.facebook.com/sayed.muhammed.54922/">
                   <FaFacebookSquare className="bg-white rounded-xl" />
                 </a>
-                <AiOutlineInstagram className="bg-white rounded-xl" />
-                <FaTwitterSquare className="bg-white rounded-xl" />
+                <a href="https://www.instagram.com/_sayedmuhammed/">
+                  <AiOutlineInstagram className="bg-white rounded-xl" />
+                </a>
               </div>
             </div>
           </nav>
@@ -295,15 +300,24 @@ export default function Home() {
               <TiContacts />
               <h3>Contact Us</h3>
               <div className="flex justify-center items-center gap-1.5 text-lg text-white">
-                <AiFillLinkedin className="bg-primary" />
-                <AiFillGithub className="bg-primary" />
-                <FaHackerrank className="bg-primary" />
-                <AiOutlineWhatsApp className="bg-primary" />
+                <a href="https://www.linkedin.com/in/sayed-mohamed-680b491b8/">
+                  <AiFillLinkedin className="bg-primary" />
+                </a>
+                <a href="https://github.com/sayedmuhammed74">
+                  <AiFillGithub className="bg-primary" />
+                </a>
+                <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
+                  <FaHackerrank className="bg-primary" />
+                </a>
+                <a href="https://wa.link/tsdp5l">
+                  <AiOutlineWhatsApp className="bg-primary" />
+                </a>
                 <a href="https://www.facebook.com/sayed.muhammed.54922/">
                   <FaFacebookSquare className="bg-primary" />
                 </a>
-                <AiOutlineInstagram className="bg-primary" />
-                <FaTwitterSquare className="bg-primary" />
+                <a href="https://www.instagram.com/_sayedmuhammed/">
+                  <AiOutlineInstagram className="bg-primary" />
+                </a>
               </div>
             </div>
           </div>
