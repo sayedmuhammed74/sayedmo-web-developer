@@ -145,7 +145,9 @@ export default function Home() {
               <p className="text-2xl mb-2">
                 A <span className="text-primary">Front End Developer</span>
               </p>
-              <button className="btn">Hire Me</button>
+              <button className="btn">
+                <a href="#contact">Hire Me</a>
+              </button>
             </div>
           </section>
         </div>
@@ -326,7 +328,7 @@ export default function Home() {
             <h2 className="text-4xl mt-7  w-60 mx-auto font-medium border-l-8 px-3 mb-8 border-primary text-white">
               Contact Us
             </h2>
-            <ContactForm />
+            <ContactForm id="contact" />
           </div>
         </div>
       </section>
