@@ -119,7 +119,7 @@ export default function Home() {
                 <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
                   <FaHackerrank className="bg-white rounded-xl" />
                 </a>
-                <a href="https://wa.link/tsdp5l">
+                <a href="https://wa.link/y3fr66">
                   <AiOutlineWhatsApp className="bg-white rounded-xl" />
                 </a>
                 <a href="https://www.facebook.com/sayed.muhammed.54922/">
