@@ -76,10 +76,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a
-              href="./resume.pdf"
-              className="font-medium px-2 py-1 rounded-lg bg-primary"
-            >
+            <a href="./resume.pdf" className="btn">
               Resume
             </a>
           </li>

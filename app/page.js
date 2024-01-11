@@ -294,13 +294,13 @@ export default function Home() {
 
             <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
               <BsFillTelephoneFill />
-              <h3>Phone</h3>
+              <h3 className="font-bold">Phone</h3>
               <p>+20 - 0110 212 8186</p>
             </div>
 
             <div className="flex flex-col items-center justify-around px-3 py-3 rounded-lg rounded-tl-3xl rounded-tr-3xl h-[150px] w-[240px] bg-primary text-white">
               <TiContacts />
-              <h3>Contact Us</h3>
+              <h3 className="font-bold">Contact Us</h3>
               <div className="flex justify-center items-center gap-1.5 text-lg text-white">
                 <a href="https://www.linkedin.com/in/sayed-mohamed-680b491b8/">
                   <AiFillLinkedin className="bg-primary" />
@@ -311,7 +311,7 @@ export default function Home() {
                 <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
                   <FaHackerrank className="bg-primary" />
                 </a>
-                <a href="https://wa.link/tsdp5l">
+                <a href="https://wa.link/y3fr66">
                   <AiOutlineWhatsApp className="bg-primary" />
                 </a>
                 <a href="https://www.facebook.com/sayed.muhammed.54922/">

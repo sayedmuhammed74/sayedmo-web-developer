@@ -4,7 +4,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Sayed Mo | Front-End Developer',
-  description: 'Front-End Developer',
+  description:
+    'Front-End Developer | MERN STACK Developer | Javascript Developer | Next.JS Developer | Node.JS Developer',
 };
 
 export default function RootLayout({ children }) {

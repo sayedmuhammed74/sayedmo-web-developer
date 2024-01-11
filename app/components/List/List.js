@@ -66,7 +66,7 @@ const List = () => {
       <li>
         <a
           href="./resume.pdf"
-          className="font-medium px-2 py-1 rounded-lg bg-primary"
+          className="btn font-medium px-2 py-1 rounded-lg bg-primary"
         >
           Resume
         </a>
