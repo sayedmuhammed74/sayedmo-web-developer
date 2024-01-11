@@ -29,10 +29,14 @@ const ContactForm = () => {
     };
     emailjs
       .send(
-        'service_vws30oj',
-        'template_ckblx7u',
+        // 'service_vws30oj',
+        // 'template_ckblx7u',
+        // templateParams,
+        // '_Rz7rINg07A9kFJyv'
+        'service_69f7v4f',
+        'template_kdmtmg6',
         templateParams,
-        '_Rz7rINg07A9kFJyv'
+        'eTaVTJXF22ltBIIs-'
       )
       .then(
         function (response) {
