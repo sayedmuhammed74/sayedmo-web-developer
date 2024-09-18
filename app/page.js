@@ -22,6 +22,7 @@ import Nav from './components/Nav';
 import Logo from '@/app/components/logo/Logo';
 import List from '@/app/components/List/List';
 import ContactForm from './components/ContactForm/ContactForm';
+import TypingEffect from '././components/TypingEffect';
 
 export default function Home() {
   // data
@@ -106,7 +107,7 @@ export default function Home() {
             <List />
             {/* follow */}
             <div>
-              <h3 className="tetx-lg text-center mb-3 font-medium text-lg">
+              <h3 className="text-center mb-3 font-medium text-lg">
                 Follow Me
               </h3>
               <div className="flex justify-between gap-1 items-center text-xl text-primary">
@@ -141,7 +142,10 @@ export default function Home() {
             />
             <div className="relative z-10 text-center text-white">
               <p className="text-2xl font-light">Hello</p>
-              <h1 className="text-5xl mb-3">I'm Sayed Mohamed</h1>
+              <h1 className="text-5xl mb-3">
+                I'm Sayed Mohamed
+                {/* <TypingEffect text="I'm Sayed Mohamed" speed={200} /> */}
+              </h1>
               <p className="text-2xl mb-2">
                 A <span className="text-primary">Front End Developer</span>
               </p>
@@ -186,7 +190,7 @@ export default function Home() {
               <div className="flex flex-col gap-3 items-center w-[320px] shadow-md p-5 rounded-md bg-dark">
                 <BiLogoGmail className="text-2xl text-primary" />
                 <h3>Gmail</h3>
-                <p>sayedmohamed123.sm74@gmail.com</p>
+                <p>sayedmo.web.developer@gmail.com</p>
               </div>
             </div>
           </div>
