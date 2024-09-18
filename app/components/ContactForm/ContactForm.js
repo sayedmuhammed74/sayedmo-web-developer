@@ -1,100 +1,84 @@
 'use client';
 
-import { useRef } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const serviceID = 'service_vws30oj';
+const templateID = 'template_ckblx7u';
+const userID = '_Rz7rINg07A9kFJyv';
+
 const ContactForm = () => {
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const numberRef = useRef();
-  const messageRef = useRef();
+  const [emailData, setEmailData] = useState({
+    name: '',
+    email: '',
+    number: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setEmailData({ ...emailData, [e.target.name]: e.target.value });
+  };
 
   const sendMessage = (e) => {
     e.preventDefault();
     if (
-      nameRef.current.value === '' ||
-      emailRef.current.value === '' ||
-      numberRef.current.value === '' ||
-      messageRef.current.value === ''
+      emailData.name &&
+      emailData.email &&
+      emailData.number &&
+      emailData.message
     ) {
-      return;
+      emailjs
+        .send(serviceID, templateID, emailData, userID)
+        .then(() => {
+          toast.success('Email is Sent Successfully');
+          setEmailData({ name: '', email: '', number: '', message: '' });
+        })
+        .catch(() => toast.fail('Email is Sent Successfully'));
     }
-    const templateParams = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      number: numberRef.current.value,
-      message: messageRef.current.value,
-    };
-    emailjs
-      .send(
-        // 'service_vws30oj',
-        // 'template_ckblx7u',
-        // templateParams,
-        // '_Rz7rINg07A9kFJyv'
-        'service_69f7v4f',
-        'template_kdmtmg6',
-        templateParams,
-        'eTaVTJXF22ltBIIs-'
-      )
-      .then(
-        function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          toast.success('Email is Sent Successfully', {
-            position: 'top-center',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'colored',
-          });
-        },
-        function (error) {
-          alert('OOPs something went wrong... Try again later');
-          console.log('FAILED...', error);
-        }
-      );
-    nameRef.current.value = '';
-    emailRef.current.value = '';
-    numberRef.current.value = '';
-    messageRef.current.value = '';
   };
   return (
     <form className="w-[80%] mx-auto flex justify-center items-center">
       <div className="grid py-5  grid-cols-2 gap-5">
         <input
           type="text"
-          className="input col-span-2"
+          name="name"
           placeholder="name"
-          ref={nameRef}
+          className="input col-span-2"
+          value={emailData.name}
+          onChange={handleChange}
         />
         <input
           type="email"
-          className="input col-span-2 md:col-span-1"
+          name="email"
           placeholder="email"
-          ref={emailRef}
+          className="input col-span-2 md:col-span-1"
+          value={emailData.email}
+          onChange={handleChange}
         />
         <input
           type="text"
-          className="input col-span-2 md:col-span-1"
+          name="number"
           placeholder="number"
-          ref={numberRef}
+          className="input col-span-2 md:col-span-1"
+          value={emailData.number}
+          onChange={handleChange}
         />
         <textarea
-          ref={messageRef}
           type="text"
-          className="input col-span-2 h-32"
+          name="message"
           placeholder="message"
+          className="input col-span-2 h-32"
+          value={emailData.message}
+          onChange={handleChange}
         />
         <button onClick={sendMessage} className="btn w-28 col-span-2 mx-auto">
           Send
         </button>
         <ToastContainer
           position="top-center"
-          autoClose={3000}
+          autoClose={1500}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
