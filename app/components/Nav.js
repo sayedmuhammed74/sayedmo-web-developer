@@ -9,17 +9,7 @@ import { AiOutlineUnorderedList } from 'react-icons/ai';
 
 const Nav = () => {
   const [toggleDropMenu, setToggleDropMenu] = useState(false);
-  // const [navbar, setNavbar] = useState(false);
   const navBar = useRef(null);
-  // window?.addEventListener('scroll', () => {
-  //   if (typeof window !== 'undefined') {
-  //     if (window.scrollY >= 620) {
-  //       navBar.current?.classList?.remove('-translate-y-full');
-  //     } else {
-  //       navBar.current?.classList?.add('-translate-y-full');
-  //     }
-  //   }
-  // });
 
   useEffect(() => {
     window?.addEventListener('scroll', () => {
@@ -35,7 +25,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed -translate-y-full w-full top-0 z-10 duration-150 ease-in opacity-90 bg-dark`}
+      className={`fixed top-0 z-20 -translate-y-full w-full duration-150 ease-in opacity-90 bg-dark`}
       ref={navBar}
     >
       <div className="container relative mx-auto flex justify-between items-center px-5 py-1 h-full text-white">
@@ -101,8 +91,8 @@ const Nav = () => {
         />
         <ul
           className={`${
-            toggleDropMenu ? 'flex' : 'hidden'
-          } transition-all absolute z-10 right-0 top-16 w-full flex-col rounded-bl-md rounded-br-md gap-3 text-center p-5 bg-dark`}
+            toggleDropMenu ? 'translate-y-0' : 'opacity-0 -translate-y-full'
+          } flex transition-all duration-300 absolute right-0 -z-10 top-16 w-full flex-col rounded-bl-md rounded-br-md gap-3 text-center p-5 bg-dark`}
         >
           <li className="text-lg font-bold cursor-pointer hover:text-gray-500 transition-all">
             <a href="#about" onClick={() => setToggleDropMenu(false)}>
