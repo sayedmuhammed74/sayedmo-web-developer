@@ -5,11 +5,7 @@ import {
   AiFillLinkedin,
   AiOutlineInstagram,
 } from 'react-icons/ai';
-import {
-  FaHackerrank,
-  FaFacebookSquare,
-  FaTwitterSquare,
-} from 'react-icons/fa';
+import { FaHackerrank, FaFacebookSquare } from 'react-icons/fa';
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { TiContacts } from 'react-icons/ti';
@@ -18,21 +14,19 @@ import { TiContacts } from 'react-icons/ti';
 import Service from './components/Service';
 import Skill from './components//Skill';
 import Project from './components/Project';
-import Nav from './components/Nav';
+import Navbar from './components/Navbar';
 import Logo from '@/app/components/logo/Logo';
 import List from '@/app/components/List/List';
 import ContactForm from './components/ContactForm/ContactForm';
-import TypingEffect from '././components/TypingEffect';
 
 // Data
 import { projects, services, skills } from './utlis/data';
-export default function Home() {
-  // data
 
+export default function Home() {
   return (
     <>
       {/* header */}
-      <Nav />
+      <Navbar />
       <header className="bg-dark" id="home">
         <div className=" grid grid-cols-9 h-[100vh]">
           <nav className="md:col-span-2 hidden md:flex flex-col justify-between items-center py-10 h-full text-white">
