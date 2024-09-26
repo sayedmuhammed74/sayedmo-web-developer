@@ -52,6 +52,13 @@ export const projects = [
     image: './projects/int.png',
   },
   {
+    name: 'Quiz App',
+    description:
+      'Simple Quiz App with Result Table with MERN Stack Technologies',
+    link: 'https://simple-quiz-application.vercel.app/',
+    image: './projects/quiz-app.jpeg',
+  },
+  {
     name: 'TEDx',
     description:
       'TEDx Banisuef Event Website 2022 with pure technologies (HTML, CSS, JavaScript) ',

@@ -79,7 +79,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="./resume.pdf" className="btn">
+            <a href="./Sayed Mohamed - MERN Developer.pdf" className="btn">
               Resume
             </a>
           </li>
@@ -119,7 +119,7 @@ const Nav = () => {
               className="rounded-lg font-medium px-3.5 py-1.5 bg-primary text-white"
               onClick={() => setToggleDropMenu(false)}
             >
-              <a href="./resume.pdf">Download CV</a>
+              <a href="./Sayed Mohamed - MERN Developer.pdf">Download CV</a>
             </button>
           </li>
         </ul>

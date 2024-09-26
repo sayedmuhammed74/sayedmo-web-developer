@@ -107,7 +107,7 @@ export default function Home() {
               to leverage these skills as a front-end developer.
             </p>
             <button className="btn m-5">
-              <a href="./resume.pdf">Download CV</a>
+              <a href="./Sayed Mohamed - MERN Developer.pdf">Download CV</a>
             </button>
             <div className="flex flex-col gap-3 md:flex-row justify-between items-center">
               <div className="flex flex-col gap-3 items-center w-[320px] shadow-md p-5 rounded-md bg-dark">
