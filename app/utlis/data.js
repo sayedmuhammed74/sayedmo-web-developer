@@ -2,16 +2,16 @@ export const services = [
   {
     title: 'Front-End Development',
     description:
-      'Proficient in HTML, CSS, Taillwind, Framer Motion, JavaScript, ReactJS, React Hooks, Redux Toolkit, NextJS 13, integration with API and',
+      'Proficient in HTML5, CSS3, Taillwind, Framer Motion, JavaScript, ReactJS, React Hooks, Redux Toolkit, NextJS 13, integration with API ...',
   },
   {
     title: 'Back-End Development',
     description:
-      'NodeJS ,ExpressJS, MongoDB , MySQL and Bakend Concepts ( Authentication, Authorization, ... )',
+      'NodeJS ,ExpressJS, MongoDB , MySQL, RESTFul API and Bakend Concepts ( Authentication, Authorization, ... )',
   },
   {
     title: 'Web Design',
-    description: 'Basics of Website Designing',
+    description: 'Figma & Standards of Web Design',
   },
 ];
 
@@ -33,6 +33,7 @@ export const skills = [
   { name: 'Git & Github', percentage: 'w-[90%]' },
   { name: 'OOP', percentage: 'w-[80%]' },
   { name: 'Pyhton', percentage: 'w-[70%]' },
+  { name: 'Figma', percentage: 'w-[70%]' },
 ];
 
 export const projects = [
