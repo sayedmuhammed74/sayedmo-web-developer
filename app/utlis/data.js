@@ -16,17 +16,23 @@ export const services = [
 ];
 
 export const skills = [
-  { name: 'HTML', percentage: 'w-[90%]' },
-  { name: 'CSS', percentage: 'w-[90%]' },
+  { name: 'HTML5', percentage: 'w-[90%]' },
+  { name: 'CSS3', percentage: 'w-[90%]' },
   { name: 'JavaScript', percentage: 'w-[90%]' },
-  { name: 'Tailwind.CSS', percentage: 'w-[90%]' },
-  { name: 'Framer Motion', percentage: 'w-[80%]' },
   { name: 'React.JS', percentage: 'w-[85%]' },
   { name: 'Next.JS', percentage: 'w-[90%]' },
+  { name: 'Redux Toolkit', percentage: 'w-[90%]' },
+  { name: 'Tailwind.CSS', percentage: 'w-[90%]' },
+  { name: 'Framer Motion', percentage: 'w-[80%]' },
   { name: 'Node.JS', percentage: 'w-[80%]' },
   { name: 'Express.JS', percentage: 'w-[80%]' },
   { name: 'MongoDB', percentage: 'w-[80%]' },
   { name: 'MySQL', percentage: 'w-[75%]' },
+  { name: 'Electron.JS', percentage: 'w-[75%]' },
+  { name: 'RESTFul API', percentage: 'w-[90%]' },
+  { name: 'Git & Github', percentage: 'w-[90%]' },
+  { name: 'OOP', percentage: 'w-[80%]' },
+  { name: 'Pyhton', percentage: 'w-[70%]' },
 ];
 
 export const projects = [
