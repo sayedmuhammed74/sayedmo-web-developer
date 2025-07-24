@@ -65,7 +65,7 @@ const List = () => {
       </motion.li>
       <li>
         <a
-          href="./Sayed Mohamed - MERN Developer.pdf"
+          href="./Sayed Mohamed Sayed.pdf"
           className="btn font-medium px-2 py-1 rounded-lg bg-primary"
         >
           Resume
