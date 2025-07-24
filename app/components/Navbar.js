@@ -1,15 +1,17 @@
 'use client';
-
 // hooks
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 
 // Icons
 import { AiOutlineUnorderedList } from 'react-icons/ai';
+import { navbar_sections } from '../utlis/data';
 
 const Nav = () => {
   const [toggleDropMenu, setToggleDropMenu] = useState(false);
   const navBar = useRef(null);
+
+  const [navTag, setNavTag] = useState('#about');
 
   useEffect(() => {
     window?.addEventListener('scroll', () => {
@@ -22,6 +24,8 @@ const Nav = () => {
       }
     });
   }, []);
+
+  const checkActive = () => {};
 
   return (
     <nav
@@ -38,52 +42,25 @@ const Nav = () => {
           <p className="text-lg">web developer</p>
         </div>
         <ul className="hidden md:flex gap-6 text-lg">
-          <li>
-            <a
-              href="#about"
-              className="font-medium duration-75 ease-in hover:text-primary"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#services"
-              className="font-medium duration-75 ease-in hover:text-primary"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              className="font-medium duration-75 ease-in hover:text-primary"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="font-medium duration-75 ease-in hover:text-primary"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="font-medium duration-75 ease-in hover:text-primary"
-            >
-              Contact Us
-            </a>
-          </li>
+          {navbar_sections.map((el) => (
+            <li key={el.id} className={navTag === el.id ? 'active' : ''}>
+              <a
+                href={el.id}
+                onClick={() => setNavTag(el.id)}
+                className="font-medium duration-75 ease-in hover:text-primary"
+              >
+                {el.name}
+              </a>
+            </li>
+          ))}
+
           <li>
             <a href="./Sayed Mohamed - MERN Developer.pdf" className="btn">
               Resume
             </a>
           </li>
         </ul>
+
         {/* icons for mobile devices */}
         <AiOutlineUnorderedList
           className="cursor-pointer text-3xl md:hidden"
@@ -119,7 +96,7 @@ const Nav = () => {
               className="rounded-lg font-medium px-3.5 py-1.5 bg-primary text-white"
               onClick={() => setToggleDropMenu(false)}
             >
-              <a href="./Sayed Mohamed - MERN Developer.pdf">Download CV</a>
+              <a href="./Sayed Mohamed Sayed.pdf">Download CV</a>
             </button>
           </li>
         </ul>

@@ -19,11 +19,6 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({ email: '', phone: '' });
 
-  // const validatePhone = (phone) => {
-  //   const regex = /^[0-9]{11}$/; // Adjust regex for your phone format
-  //   return regex.test(phone);
-  // };
-
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
@@ -37,12 +32,6 @@ const ContactForm = () => {
     } else if (e.target.name === 'email' && validateEmail(e.target.value)) {
       setErrors({ ...errors, email: '' });
     }
-    // Phone Validation
-    // if (e.target.name === 'phone' && !validatePhone(e.target.value)) {
-    //   setErrors({ ...errors, phone: 'Not Valid Phone Number' });
-    // } else if (e.target.name === 'phone' && validatePhone(e.target.value)) {
-    //   setErrors({ ...errors, phone: '' });
-    // }
   };
 
   const sendMail = (e) => {
@@ -91,7 +80,7 @@ const ContactForm = () => {
             type="text"
             name="phone"
             placeholder="phone"
-            className="input "
+            className="input"
             value={emailData.phone}
             onChange={handleChange}
           />

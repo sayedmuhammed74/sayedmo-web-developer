@@ -1,11 +1,11 @@
 // icons
 import {
-  AiFillGithub,
   AiOutlineWhatsApp,
   AiFillLinkedin,
   AiOutlineInstagram,
 } from 'react-icons/ai';
-import { FaHackerrank, FaFacebookSquare } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
+import { FaHackerrank, FaFacebookF } from 'react-icons/fa';
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { TiContacts } from 'react-icons/ti';
@@ -20,13 +20,13 @@ import List from '@/app/components/List/List';
 import ContactForm from './components/ContactForm/ContactForm';
 
 // Data
-import { projects, services, skills } from './utlis/data';
+import { projects, services, skills, media } from './utlis/data';
 
 export default function Home() {
   return (
     <>
-      {/* header */}
       <Navbar />
+      {/* header */}
       <header className="bg-dark" id="home">
         <div className=" grid grid-cols-9 h-[100vh]">
           <nav className="md:col-span-2 hidden md:flex flex-col justify-between items-center py-10 h-full text-white">
@@ -39,22 +39,22 @@ export default function Home() {
                 Follow Me
               </h3>
               <div className="flex justify-between gap-1 items-center text-xl text-primary">
-                <a href="https://www.linkedin.com/in/sayed-mohamed-680b491b8/">
+                <a href={media.linkedin}>
                   <AiFillLinkedin className="bg-white rounded-xl" />
                 </a>
-                <a href="https://github.com/sayedmuhammed74">
-                  <AiFillGithub className="bg-white rounded-xl" />
+                <a href={media.github}>
+                  <FiGithub className="bg-white rounded-xl" />
                 </a>
-                <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
+                <a href={media.hackerrank}>
                   <FaHackerrank className="bg-white rounded-xl" />
                 </a>
-                <a href="https://wa.link/y3fr66">
+                <a href={media.whatsapp}>
                   <AiOutlineWhatsApp className="bg-white rounded-xl" />
                 </a>
-                <a href="https://www.facebook.com/sayed.muhammed.54922/">
-                  <FaFacebookSquare className="bg-white rounded-xl" />
+                <a href={media.facebook}>
+                  <FaFacebookF className="bg-white rounded-xl" />
                 </a>
-                <a href="https://www.instagram.com/_sayedmuhammed/">
+                <a href={media.instagram}>
                   <AiOutlineInstagram className="bg-white rounded-xl" />
                 </a>
               </div>
@@ -67,18 +67,16 @@ export default function Home() {
               src="./cover.jpg"
               className="absolute top-0 w-full h-full z-0 rounded-tl-3xl rounded-bl-3xl"
               alt=""
+              loading="lazy"
             />
             <div className="relative z-10 text-center text-white">
               <p className="text-2xl font-light">Hello</p>
-              <h1 className="text-5xl mb-3">
-                I'm Sayed Mohamed
-                {/* <TypingEffect text="I'm Sayed Mohamed" speed={200} /> */}
-              </h1>
+              <h1 className="text-5xl mb-3">I'm Sayed Mohamed</h1>
               <p className="text-2xl mb-2">
                 A <span className="text-primary">Front End Developer</span>
               </p>
               <button className="btn">
-                <a href="#contact">Hire Me</a>
+                <a href="#contact">Contact Me</a>
               </button>
             </div>
           </section>
@@ -107,7 +105,7 @@ export default function Home() {
               to leverage these skills as a front-end developer.
             </p>
             <button className="btn m-5">
-              <a href="./Sayed Mohamed - MERN Developer.pdf">Download CV</a>
+              <a href="./Sayed Mohamed Sayed.pdf">Download CV</a>
             </button>
             <div className="flex flex-col gap-3 md:flex-row justify-between items-center">
               <div className="flex flex-col gap-3 items-center w-[320px] shadow-md p-5 rounded-md bg-dark">
@@ -123,7 +121,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-3 lg:col-span-1">
-            <img src="./about.jpg" alt="" />
+            <img src="./about.jpg" alt="" loading="lazy" />
           </div>
         </div>
       </section>
@@ -153,36 +151,47 @@ export default function Home() {
               Skills
             </h2>
             <div className="flex flex-wrap justify-around gap-10 px-5 py-5">
-              <img src="./skills/html.svg" className="md:w-1/5" alt="html" />
+              <img
+                src="./skills/html.svg"
+                className="md:w-1/5"
+                alt="HTML"
+                loading="lazy"
+              />
               <img
                 src="./skills/tailwind.svg"
                 className="md:w-1/5"
-                alt="tailwind css"
+                alt="Tailwind CSS"
+                loading="lazy"
               />
               <img
                 src="./skills/js.svg"
                 className="md:w-1/5"
-                alt="javascript"
+                alt="JavaScript"
+                loading="lazy"
               />
               <img
                 src="./skills/react.svg"
                 className="md:w-1/5"
-                alt="reactjs"
+                alt="ReactJS"
+                loading="lazy"
               />
               <img
                 src="./skills/nodejs.svg"
                 className="md:w-1/5"
-                alt="nodejs"
+                alt="NodeJS"
+                loading="lazy"
               />
               <img
                 src="./skills/mongodb.svg"
                 className="md:w-1/5"
-                alt="mongodb"
+                alt="MongoDB"
+                loading="lazy"
               />
               <img
                 src="./skills/mysql.svg"
                 className="md:w-1/5"
-                alt="mysqldb"
+                alt="mysql"
+                loading="lazy"
               />
             </div>
           </div>
@@ -198,7 +207,7 @@ export default function Home() {
 
       {/* Projects */}
       <section id="projects">
-        <div className="container mx-auto px-5 py-20 lg:h-[100vh]">
+        <div className="container mx-auto px-5 py-20 lg:min-h-[100vh]">
           <h2 className="text-4xl font-medium border-l-8 px-3 mb-5 border-primary text-white">
             Projects
           </h2>
@@ -234,31 +243,32 @@ export default function Home() {
               <TiContacts />
               <h3 className="font-bold">Contact Us</h3>
               <div className="flex justify-center items-center gap-1.5 text-lg text-white">
-                <a href="https://www.linkedin.com/in/sayed-mohamed-680b491b8/">
+                <a href={media.linkedin}>
                   <AiFillLinkedin className="bg-primary" />
                 </a>
-                <a href="https://github.com/sayedmuhammed74">
-                  <AiFillGithub className="bg-primary" />
+                <a href={media.github}>
+                  <FiGithub className="bg-primary" />
                 </a>
-                <a href="https://www.hackerrank.com/profile/sayedmohamed1231">
+                <a href={media.hackerrank}>
                   <FaHackerrank className="bg-primary" />
                 </a>
-                <a href="https://wa.link/y3fr66">
+                <a href={media.whatsapp}>
                   <AiOutlineWhatsApp className="bg-primary" />
                 </a>
-                <a href="https://www.facebook.com/sayed.muhammed.54922/">
-                  <FaFacebookSquare className="bg-primary" />
+                <a href={media.facebook}>
+                  <FaFacebookF className="bg-primary" />
                 </a>
-                <a href="https://www.instagram.com/_sayedmuhammed/">
+                <a href={media.instagram}>
                   <AiOutlineInstagram className="bg-primary" />
                 </a>
               </div>
             </div>
           </div>
 
+          {/* Contact*/}
           <div className="-mt-7 px-5 py-5 rounded-3xl w-[85%] mx-auto bg-dark">
             <h2 className="text-4xl mt-7  w-60 mx-auto font-medium border-l-8 px-3 mb-8 border-primary text-white">
-              Contact Us
+              Contact Me
             </h2>
             <ContactForm id="contact" />
           </div>

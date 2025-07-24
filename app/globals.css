@@ -23,5 +23,9 @@ html {
   @apply scale-110 duration-75 ease-in opacity-90;
 }
 .input {
-  @apply text-base px-4 py-1 rounded-2xl text-gray-500 bg-black;
+  @apply text-base px-4 py-1 rounded-2xl text-gray-500 bg-white;
+}
+
+.active {
+  @apply border-b-2 border-white;
 }

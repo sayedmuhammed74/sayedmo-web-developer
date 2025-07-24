@@ -38,14 +38,25 @@ export const skills = [
 
 export const projects = [
   {
-    name: 'E-Commerce',
+    name: 'Mountain Matrix',
+    slug: 'mountian-matrix',
+    description: '',
+    link: 'https://mountains-matrix-s.vercel.app/',
+    github: 'https://github.com/sayedmuhammed74/mountain-matrix',
+    image: './projects/mountain-matrix.png',
+  },
+  {
+    name: 'Mashro3',
+    slug: 'mashro3',
     description:
       'Full Stack E-Commerce Website in MERN Stack Technologies Full Stack E-Commerce Website in MERN Stack Technologies',
     link: 'https://mashro3.vercel.app/',
     image: './projects/e-commerce.png',
+    front: 'https://github.com/sayedmuhammed74/mashro3',
   },
   {
     name: 'Social App',
+    slug: 'social-media',
     description:
       'Responsive Front End Social with pure technologies (HTML, CSS, JavaScript)',
     link: 'https://sayedmuhammed74.github.io/social',
@@ -53,6 +64,7 @@ export const projects = [
   },
   {
     name: 'INT',
+    slug: 'int',
     description:
       'Startup Programming Company Website with Technologies (Next.js, Tailwind.css, Framer Motion, React Query)',
     link: 'https://int-firm.com/',
@@ -60,6 +72,7 @@ export const projects = [
   },
   {
     name: 'Quiz App',
+    slug: 'quiz-app',
     description:
       'Simple Quiz App with Result Table with MERN Stack Technologies',
     link: 'https://simple-quiz-application.vercel.app/',
@@ -67,6 +80,7 @@ export const projects = [
   },
   {
     name: 'TEDx',
+    slug: 'tedx',
     description:
       'TEDx Banisuef Event Website 2022 with pure technologies (HTML, CSS, JavaScript) ',
     link: 'https://sayedmuhammed74.github.io/TEDx/',
@@ -74,9 +88,27 @@ export const projects = [
   },
   {
     name: 'Portfolio',
+    slug: 'portfolio',
     description:
       'old Portfolio to show the difference and progress with Technologies (React.js, Pure CSS)',
     link: 'https://sayedmuhammed74.github.io/Portfolio/',
     image: './projects/portfolio.png',
   },
+];
+
+export const media = {
+  linkedin: 'https://www.linkedin.com/in/sayed-mohamed-680b491b8/',
+  facebook: 'https://www.facebook.com/sayed.muhammed.54922/',
+  github: 'https://github.com/sayedmuhammed74',
+  hackerrank: 'https://www.hackerrank.com/profile/sayedmohamed1231',
+  whatsapp: 'https://wa.link/y3fr66',
+  instagram: 'https://www.instagram.com/_sayedmuhammed',
+};
+
+export const navbar_sections = [
+  { id: '#about', name: 'About' },
+  { id: '#services', name: 'Services' },
+  { id: '#skills', name: 'Skills' },
+  { id: '#projects', name: 'Projects' },
+  { id: '#contact', name: 'Contact Us' },
 ];
