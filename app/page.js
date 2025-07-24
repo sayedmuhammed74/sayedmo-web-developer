@@ -94,15 +94,12 @@ export default function Home() {
               I am a <span className="text-primary">Front End Developer</span>
             </p>
             <p className="leading-8">
-              Recent Computer Science graduate with focus on Front-End Web
-              Development & Backend (NodeJS) I'm in the way to be Full Stack
-              (MERN). Proficient in HTML5, CSS3, Taillwind, JavaScript, React,
-              NextJS, Restful API and responsive web design. And not a little
-              knowledge in backend side ( Nodejs , Express , mongodb, mysql )
-              and its concepts ( Authentication, Authorisation , MVC
-              architecture, Modelling, RestFul API , …) Strong collaboration
-              skills, attention to detail, and problem-solving skills. Seeking
-              to leverage these skills as a front-end developer.
+              Passionate MERN Stack Developer with hands-on experience in
+              building dynamic, full-stack web applications. Skilled in MongoDB,
+              Express.js, React, and Node.js, with a strong focus on clean code,
+              performance, and user experience. I love turning ideas into real,
+              usable products and always aim to learn and grow with every
+              project.
             </p>
             <button className="btn m-5">
               <a href="./Sayed Mohamed Sayed.pdf">Download CV</a>
