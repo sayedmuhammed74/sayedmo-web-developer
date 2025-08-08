@@ -1,6 +1,13 @@
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'], // اختار الأوزان اللي هتستخدمها
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export const metadata = {
   title: 'Sayed Mo | Front-End Developer',
@@ -13,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={
-          inter.className +
+          poppins.className +
           ` bg-[url('/background.jpg')] bg-white bg-repeat-round`
         }
       >

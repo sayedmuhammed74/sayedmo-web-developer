@@ -1,13 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-const serviceID = 'service_vws30oj';
-const templateID = 'template_ckblx7u';
-const userID = '_Rz7rINg07A9kFJyv';
 
 const ContactForm = () => {
   const [emailData, setEmailData] = useState({
@@ -18,6 +13,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({ email: '', phone: '' });
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,6 +22,7 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setEmailData({ ...emailData, [e.target.name]: e.target.value });
+
     // Email Validation
     if (e.target.name === 'email' && !validateEmail(e.target.value)) {
       setErrors({ ...errors, email: 'Not Valid Email' });
@@ -34,8 +31,9 @@ const ContactForm = () => {
     }
   };
 
-  const sendMail = (e) => {
+  const sendMail = async (e) => {
     e.preventDefault();
+
     if (
       emailData.name &&
       emailData.email &&
@@ -43,13 +41,30 @@ const ContactForm = () => {
       emailData.message &&
       validateEmail(emailData.email)
     ) {
-      emailjs
-        .send(serviceID, templateID, emailData, userID)
-        .then(() => {
-          toast.success('Email is Sent Successfully');
+      setLoading(true);
+
+      try {
+        const res = await fetch('/api/sendmail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(emailData),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          toast.success('Email sent successfully');
           setEmailData({ name: '', email: '', phone: '', message: '' });
-        })
-        .catch(() => toast.fail('Email Rejected'));
+        } else {
+          toast.error(data.message || 'Email sending failed');
+        }
+      } catch (error) {
+        toast.error('Something went wrong');
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      toast.error('Please fill all fields correctly');
     }
   };
 
@@ -87,15 +102,18 @@ const ContactForm = () => {
           <span className="text-center text-red-500">{errors.phone}</span>
         </div>
         <textarea
-          type="text"
           name="message"
           placeholder="message"
           className="input col-span-2 h-32"
           value={emailData.message}
           onChange={handleChange}
         />
-        <button onClick={sendMail} className="btn w-28 col-span-2 mx-auto">
-          Send
+        <button
+          onClick={sendMail}
+          disabled={loading}
+          className="btn text-center w-36 col-span-2 mx-auto"
+        >
+          {loading ? 'Sending...' : 'Send'}
         </button>
         <ToastContainer
           position="top-center"
@@ -115,3 +133,121 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+// 'use client';
+
+// import { useState } from 'react';
+// import emailjs from '@emailjs/browser';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// const serviceID = 'service_vws30oj';
+// const templateID = 'template_ckblx7u';
+// const userID = '_Rz7rINg07A9kFJyv';
+
+// const ContactForm = () => {
+//   const [emailData, setEmailData] = useState({
+//     name: '',
+//     email: '',
+//     phone: '',
+//     message: '',
+//   });
+
+//   const [errors, setErrors] = useState({ email: '', phone: '' });
+
+//   const validateEmail = (email) => {
+//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(email);
+//   };
+
+//   const handleChange = (e) => {
+//     setEmailData({ ...emailData, [e.target.name]: e.target.value });
+//     // Email Validation
+//     if (e.target.name === 'email' && !validateEmail(e.target.value)) {
+//       setErrors({ ...errors, email: 'Not Valid Email' });
+//     } else if (e.target.name === 'email' && validateEmail(e.target.value)) {
+//       setErrors({ ...errors, email: '' });
+//     }
+//   };
+
+//   const sendMail = (e) => {
+//     e.preventDefault();
+//     if (
+//       emailData.name &&
+//       emailData.email &&
+//       emailData.phone &&
+//       emailData.message &&
+//       validateEmail(emailData.email)
+//     ) {
+//       emailjs
+//         .send(serviceID, templateID, emailData, userID)
+//         .then(() => {
+//           toast.success('Email is Sent Successfully');
+//           setEmailData({ name: '', email: '', phone: '', message: '' });
+//         })
+//         .catch(() => toast.fail('Email Rejected'));
+//     }
+//   };
+
+//   return (
+//     <form className="w-[80%] mx-auto flex justify-center items-center">
+//       <div className="grid py-5 grid-cols-2 gap-5">
+//         <input
+//           type="text"
+//           name="name"
+//           placeholder="name"
+//           className="input col-span-2"
+//           value={emailData.name}
+//           onChange={handleChange}
+//         />
+//         <div className="flex flex-col col-span-2 md:col-span-1">
+//           <input
+//             type="email"
+//             name="email"
+//             placeholder="email"
+//             className="input"
+//             value={emailData.email}
+//             onChange={handleChange}
+//           />
+//           <span className="text-center text-red-500">{errors.email}</span>
+//         </div>
+//         <div className="flex flex-col col-span-2 md:col-span-1">
+//           <input
+//             type="text"
+//             name="phone"
+//             placeholder="phone"
+//             className="input"
+//             value={emailData.phone}
+//             onChange={handleChange}
+//           />
+//           <span className="text-center text-red-500">{errors.phone}</span>
+//         </div>
+//         <textarea
+//           type="text"
+//           name="message"
+//           placeholder="message"
+//           className="input col-span-2 h-32"
+//           value={emailData.message}
+//           onChange={handleChange}
+//         />
+//         <button onClick={sendMail} className="btn w-28 col-span-2 mx-auto">
+//           Send
+//         </button>
+//         <ToastContainer
+//           position="top-center"
+//           autoClose={1500}
+//           hideProgressBar={false}
+//           newestOnTop={false}
+//           closeOnClick
+//           rtl={false}
+//           pauseOnFocusLoss
+//           draggable
+//           pauseOnHover
+//           theme="colored"
+//         />
+//       </div>
+//     </form>
+//   );
+// };
+
+// export default ContactForm;

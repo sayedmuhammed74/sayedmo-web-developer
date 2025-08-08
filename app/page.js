@@ -18,6 +18,7 @@ import Navbar from './components/Navbar';
 import Logo from '@/app/components/logo/Logo';
 import List from '@/app/components/List/List';
 import ContactForm from './components/ContactForm/ContactForm';
+import TypeWriterComponent from './components/TypeWriterComponent';
 
 // Data
 import { projects, services, skills, media } from './utlis/data';
@@ -72,9 +73,10 @@ export default function Home() {
             <div className="relative z-10 text-center text-white">
               <p className="text-2xl font-light">Hello</p>
               <h1 className="text-5xl mb-3">I'm Sayed Mohamed</h1>
-              <p className="text-2xl mb-2">
+              {/* <p className="text-2xl mb-2">
                 A <span className="text-primary">Front End Developer</span>
-              </p>
+              </p> */}
+              <TypeWriterComponent />
               <button className="btn">
                 <a href="#contact">Contact Me</a>
               </button>
