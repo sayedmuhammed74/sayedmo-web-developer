@@ -94,6 +94,13 @@ export const projects = [
     link: 'https://sayedmuhammed74.github.io/Portfolio/',
     image: './projects/portfolio.png',
   },
+  {
+    name: 'MERN Social App',
+    slug: 'mern-social-app',
+    description: 'Full Stack Social App with MERN Technologies',
+    link: 'https://full-stack-social-app.vercel.app/',
+    image: './projects/mern-social-app.png',
+  },
 ];
 
 export const media = {
