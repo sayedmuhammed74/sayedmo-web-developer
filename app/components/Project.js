@@ -24,11 +24,15 @@ const Project = ({ project }) => {
           <BiLogoNodejs />
         </div>
         <div className="mt-5 flex justify-around">
-          <button className="px-5 py-1.5 rounded-md w-24 text-center text-white bg-primary">
-            <a href={project.link} target="_blank">
-              Visit
-            </a>
-          </button>
+          {/* <button className="px-5 py-1.5 rounded-md w-24 text-center text-white bg-primary"> */}
+          <a
+            href={project.link}
+            className="px-5 py-1.5 rounded-md w-24 text-center text-white bg-primary"
+            target="_blank"
+          >
+            Visit
+          </a>
+          {/* </button> */}
           <Link
             href={`/projects/${project.slug}`}
             className="px-5 py-1.5 rounded-md w-24 text-center text-white bg-gray-400"
